@@ -1,0 +1,139 @@
+/* */
+/* CREATE THIS FILE IN ./src/main.css */
+/* */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol,
+ul {
+  /* padding-left: 30px; */
+}
+
+ul {
+   list-style: none;
+}
+
+.game-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25em;
+}
+
+.Board {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25em;
+  height: 22em;
+  position: relative;
+}
+
+.BoardOptions {
+}
+
+.Board-row {
+  position: relative;
+}
+
+.Board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.BoardSquare {
+  float: left;
+  position: relative;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  left: 15%;
+}
+
+.BoardSquare:active {
+  font-size: 30px;
+}
+
+.Square {
+  height: 100%;
+  width: 100%;
+}
+
+.Square.movesFrom {
+  opacity: 0.7;
+}
+
+.Square.movesTo {
+  background-color: #f0f8ff;
+}
+
+.Square.ghost {
+  opacity: 0.1;
+}
+
+.dot {
+  height: 100%;
+  width: 100%;
+  padding-top: 6px;
+}
+
+.t,
+.b,
+.l,
+.r,
+.br,
+.bl,
+.tr,
+.tl {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.t {
+  border-top: 1px solid #999;
+}
+
+.b {
+  border-bottom: 1px solid #999;
+}
+
+.l {
+  border-left: 1px solid #999;
+}
+
+.r {
+  border-right: 1px solid #999;
+}
+
+.br {
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+.bl {
+  border-left: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+.tr {
+  border-right: 1px solid #999;
+  border-top: 1px solid #999;
+}
+
+.tl {
+  border-left: 1px solid #999;
+  border-top: 1px solid #999;
+}

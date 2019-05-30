@@ -1,50 +1,73 @@
 /* */
 /* CREATE THIS FILE IN ./src/main.css */
 /* */
-
 html,
 body,
 #root {
   height: 100%;
+  width: 100%;
+  display: flex;
 }
 
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   margin: 20px;
 }
 
 ol,
-ul {
-  /* padding-left: 30px; */
-}
+ul {}
 
 ul {
-   list-style: none;
+  list-style: none;
 }
 
 .game-content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25em;
-}
-
-.Board {
-  margin-left: auto;
-  margin-right: auto;
-  width: 25em;
-  height: 22em;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .BoardOptions {
+  flex: 1;
+  margin: auto;
+  display: flex;
+  bottom: 0;
+}
+
+Select, Button {
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.OptionButtons {
+  margin: auto;
+}
+
+.Board {
+  flex: 1;
+  margin: auto;
+}
+
+.game-info {
+  font-size: 30px;
+  flex: 1;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.status {
+  margin: auto;
 }
 
 .Board-row {
-  position: relative;
+  display: flex;
 }
 
 .Board-row:after {
@@ -54,16 +77,14 @@ ul {
 }
 
 .BoardSquare {
-  float: left;
   position: relative;
-  line-height: 32px;
-  width: 32px;
-  height: 32px;
-  left: 15%;
+  line-height: 22px;
+  width: 42px;
+  height: 42px;
 }
 
 .BoardSquare:active {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .Square {
@@ -71,12 +92,16 @@ ul {
   width: 100%;
 }
 
+.Pinne {}
+
 .Square.movesFrom {
   opacity: 0.7;
 }
 
 .Square.movesTo {
   background-color: #f0f8ff;
+  border-radius: 32px;
+  background-size: 32px;
 }
 
 .Square.ghost {
@@ -86,7 +111,7 @@ ul {
 .dot {
   height: 100%;
   width: 100%;
-  padding-top: 6px;
+  padding-top: 7px;
 }
 
 .t,
